@@ -1,0 +1,271 @@
+{%load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" type="text/css" href="{% static '/main.css/'%}"> -->
+  <link rel="stylesheet" href="/static/main.css">
+  <title>Gift Shop</title>
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(200, 70, 70)">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="/static/giftshop-logo.jpg" style="height:70px; width:250px; margin: 0px; padding: 0px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid">
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" id="searchitem" placeholder="Search" aria-label="Search product" onkeyup="search()">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+         
+          <!-- <div class="product-list">
+            <div class="product" style="display:flex; text-align:center; cursor:pointer">
+              <img class="pimg" style="max-height: 70px; max-width:70px; object-fit: cover; border-radius: 5px;" src="/static/itemimgs/p-lucky-bamboo-in-mini-bowl-glass-vase-139332-m.webp" alt="p-lucky-bamboo-in-mini-bowl-glass-vase-139332-m">
+              <div class="p-details">
+                <span>Plants for everyone</span>
+              </div>
+            </div>
+            <div class="product" style="display:flex; text-align:center; cursor:pointer">
+              <img class="pimg" style="max-height: 70px; max-width:70px; object-fit: cover; border-radius: 5px;" src="/static/itemimgs/p-lucky-bamboo-in-mini-bowl-glass-vase-139332-m.webp" alt="p-lucky-bamboo-in-mini-bowl-glass-vase-139332-m">
+              <div class="p-details">
+                <span>Outdoor plants</span>
+              </div>
+            </div>
+            <div class="product" style="display:flex; text-align:center; cursor:pointer">
+              <img class="pimg" style="max-height: 70px; max-width:70px; object-fit: cover; border-radius: 5px;" src="/static/itemimgs/p-lucky-bamboo-in-mini-bowl-glass-vase-139332-m.webp" alt="p-lucky-bamboo-in-mini-bowl-glass-vase-139332-m">
+              <div class="p-details">
+                <span>Indoor plants </span>
+              </div>
+            </div>
+          </div> -->
+          <a style="color:white;" href="wishlist"><i class="fa-solid fa-heart fa-xl"></i></a>
+          <a style="color:white;" href="cart"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+          <a style="color:white;" href="profile"><i class="fa-solid fa-user  fa-xl	"></i></a>
+        </form>
+        
+      </div>
+      
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<body>
+  </div>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link " href="personalized">Personalized</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="cakes">Cakes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="flower">Flower</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="new_arrivals">New Arrivals</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="gourmet">Gourmet</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="plant">Plant</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="co_gifts">Bulk/Corporate Gifts</a>
+    </li>
+
+  </ul>
+
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static '/bg-1.webp'%}" class="d-block w-100" alt="bg-1" style="height:350px">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Welcome To Gift Shop</h2>
+          <p>Gift Online-send unique and unexpected gifts to your love ones</p>
+        </div>
+
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static '/bg-2.jpg'%}" class="d-block w-100" alt="bg-2" style="height:350px">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Secret Santa Gifts</h2>
+          <p>Send some suprise gift and become secret santa to someones</p>
+        </div>
+
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/bg-3.jpg'%}" class="d-block w-100" alt="bg-3" style="height:350px">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Share some unexpected gifts</h2>
+          <p>Bring light and happiness to poor families by sending your love </p>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="row row-cols-7 row-cols-md-7 g-2" id="itemrow">
+    <div class="col cardcolum">
+      <div class="card h-100 itemcard">
+        <img src="/static/flower-icon.webp" class="card-img-top itemimg" alt="flower-icon">
+        <div class="card-footer">
+         <a href="flower"> <small class="text-muted">Flower</small></a>
+        </div>
+      </div>
+    </div>
+    <div class="col cardcolum">
+      <div class="card h-100 itemcard">
+        <img src="/static/cake-icon.webp" class="card-img-top itemimg" alt="cake-icon">
+        <div class="card-footer">
+        <a href="cakes">  <small class="text-muted">Cakes</small></a>
+        </div>
+      </div>
+    </div>
+    <div class="col cardcolum">
+      <div class="card h-100 itemcard">
+        <img src="/static/chocolate-icon.jpg" class="card-img-top itemimg" alt="chocolate-icon">
+        <div class="card-footer">
+         <a href="gourmet"> <small class="text-muted">Chocolate</small></a>
+        </div>
+      </div>
+    </div>
+    <div class="col cardcolum">
+      <div class="card h-100 itemcard">
+        <img src="/static/plant-icon.webp" class="card-img-top itemimg" alt="placeholder">
+        <div class="card-footer">
+        <a href="plant" ><small class="text-muted">Plant</small></a> 
+        </div>
+      </div>
+    </div>
+    <div class="col cardcolum">
+      <div class="card h-100 itemcard">
+        <img src="/static/combo-icon.webp" class="card-img-top itemimg" alt="combo-icon">
+        <div class="card-footer">
+          <a href="flower"><small class="text-muted">Plants and Flowers</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img id="offer" src="/static/offer.webp">
+
+  <div class="row row-cols-5 row-cols-md-5 g-1" id="features">
+    <div class="col h-100 featurescol">
+      <div class="card h-100 featurecard">
+        <img class="logo" src="/static/secure-1og.png" class="card-img-top h-100" alt="secure-1og">
+        <div class="card-body">
+          <h5 class="card-title">100% Secure</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col h-100 featurescol">
+      <div class="card h-100 featurecard">
+        <img class="logo" src="/static/india-logo.png" class="card-img-top h-100" alt="india-logo">
+        <div class="card-body">
+          <h5 class="card-title">Free Delivery</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col h-100 featurescol">
+      <div class="card h-100 featurecard">
+        <img class="logo" src="/static/day-night-logo.png" class="card-img-top h-100" alt="day-night-logo">
+        <div class="card-body">
+          <h5 class="card-title">Mid Night</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col h-100 featurescol">
+      <div class="card h-100 featurecard">
+        <img class="logo" src="/static/same-day-logo.png" class="card-img-top h-100" alt="same-day-logo">
+        <div class="card-body">
+          <h5 class="card-title">Same Days</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h4>Buy and Send Online Gifts to India</h4>
+  <p>A lot of our online gift ideas included in our assortment come with the fantastic chance to personalise them with
+    memorable photos and heartfelt messages that will assuredly make the entire gifting experience unforgettable: these
+    items include simple yet heart-touching fridge magnets, stylish and personalised metallic keychains, romance
+    cushions, unique puzzle-cum-photo frames, the newest table tops, amazing hanging cubes, etc. When love is in the
+    air, as they say, why leave the beloved husbands behind on a special day from being included in the group of those
+    who are to be enlivened with heartfelt gifts from our exclusive online gift store? In gifts for husbands,
+    Giftcart.com offers a range of choices especially for husbands like dart game sets, chocolate bouquets, cube lit
+    mini photo frames, grooming kits (with products from Gillette, for instance), unique sling bags for men, shoe bags,
+    branded clocks, lunch box sets, love-design iPhone cases, and unique gift combos including a leather belt, an
+    organiser and a deo-spray, and even a beautiful pen and pouch gift-set. For those who are unique in their choices
+    and wish to go the uncommon way for their hubby dearest, go for designing a unique and personalised magazine cover
+    with your husband's most amazing photograph or even the timeless gold rings with their name on it! There are of
+    course a range of others in other preferred categories of gifts for husbands, which includes cool watches and
+    barware that are not to be missed!
+  </p>
+  <p>Coming away from the utterly personal, and moving in the corporate arena where the gifts need to be customised
+    accordingly, the attitude behind choosing some fantastic gifts for associates, clients, colleagues and employees is
+    a wholly different matter. Here, there is always a need to maintain a very fine line between pleasing and
+    appreciating needs to be towed. Besides, an extremely important and a must tone to be maintained in the corporate
+    gifts is not to get too personal. At Giftcart.com, our corporate gifting category will make you think as it has
+    myriad solutions that fit the bill and your thoughts. Corporate gifts and hampers available at our gift store
+    includes simple and unique three-piece lunch boxes, branded wrist watches and wallets – sometimes we have combined
+    things; these include clock and pen combos, amazing pen stands, soap dispensers, letter holders, luggage tags,
+    magnifying glasses, and such like – the diverse range available in our assortment clearly cover the sleek, the suave
+    and the very useful of online gift options.
+  </p>
+  <p>Giftcart strives to become the ultimate choice, and our collection makes us the best site to send gifts to India -
+    anywhere in India. We cover each part of India including Bangalore, Chennai, Hyderabad, Delhi, Kolkata, Gurgaon,
+    Pune, Trivandrum, Mumbai, Ahmedabad, Lucknow, Jaipur, Coimbatore, Noida so you can send all types of gifts to India
+    from anywhere.
+  </p>
+  <center><h2>Follow us +</h2></center>
+  <div class="card-group">
+    <div class="card followcard" id="twitter">
+     <a href="#" ><i class="fa-brands fa-twitter fa-2xl	"></i></a>
+      <div class="card-body">
+        <h5 class="card-title">Twitter</h5>
+      </div>
+    </div>
+    <div class="card followcard"id="fb">
+      <a href="#" ><i class="fa-brands fa-facebook-f fa-2xl"></i></a>
+      <div class="card-body">
+        <h5 class="card-title">Facebook</h5>
+      </div>
+    </div>
+    <div class="card followcard" id="insta">
+      <a href="#" ><i class="fa-brands fa-instagram fa-2xl"></i></a>
+      <div class="card-body">
+        <h5 class="card-title">Instagram</h5>
+      </div>
+  
+    </div>
+  </div>
+  <script src="/static/main.js"></script>
+  <script src="https://kit.fontawesome.com/1c99df2a99.js" crossorigin="anonymous"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

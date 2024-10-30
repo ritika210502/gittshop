@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.main-title{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+}
+.itemcontainer {
+    background-color: beige;
+    margin: auto;
+    padding: auto;
+}
+
+.itemcard {
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin: 1px;
+    background: rgb(208, 35, 35);
+    color: white;
+    border-radius: 25px;
+    max-width: 350px;
+    outline: 12px #000;
+
+}
+.wishlist{
+    justify-content: end;
+    text-align: end;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.itemimg {
+    margin: 5px;
+    margin-top: 1rem;
+    padding: 2px;
+    max-height: 250px;
+    max-width: 270px;
+    display: inline;
+    background: #000;
+}
+
+.itemtext {
+    font-size: small;
+    font-family: sans-serif;
+
+}
+.itembtn{
+    background-color: lightgrey;
+    color:red;
+    font-weight: bolder;
+    border:#000;
+    cursor:pointer;
+    font-family: sans-serif;
+
+}
